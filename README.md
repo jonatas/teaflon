@@ -74,3 +74,14 @@ Example `.env` file:
 ```env
 PG_BIO_URL=postgresql://localhost:28818/bio_demo
 ```
+
+### Multiomics Integration: The Bioceramic Compiler
+
+We have built a complete, end-to-end multiomics compiler using `pg_bio` to simulate the insertion, folding, and dosage of the Teaflon bioceramic protein in human cells.
+
+All scripts for this pipeline are located in `pg_bio_multiomics_pipeline/`:
+
+1. **Step 1 (Genomics):** `step1_genomics.py` uses 1D PostgreSQL GiST indexes to identify the `SafeLocus_B` on Chromosome 17 to safely insert the gene adjacent to the Nail promoter.
+2. **Step 2 (Proteomics):** `step2_folding.py` simulates the folded Beta-Barrel and uses Z-Order curves to instantly find the Keratin `ARG_BIND` pocket in 3D space.
+3. **Step 3 (Transcriptomics):** `step3_transcriptomics.py` simulates single-cell expression using Compressed Sparse Row (CSR) arrays to verify the bioceramic dosage lands perfectly inside the Goldilocks zone (15-50 RNA copies) for nails, avoiding bone hardening.
+4. **Interactive Notebook:** We provide a fully executed Jupyter Notebook `teaflon_multiomics_tutorial.ipynb` detailing the entire multiomics cross-domain architecture.
