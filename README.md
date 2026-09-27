@@ -33,7 +33,7 @@ This project uses `uv` for dependency management.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/teaflon.git
+git clone https://github.com/jonatas/teaflon.git
 cd teaflon
 
 # Install dependencies (including PyMOL, PyTorch, Transformers, etc. if required)
@@ -52,7 +52,7 @@ uv run render_trifusion.py
 
 ## 🧬 Integration with `pg_bio`
 
-TeaFlon is officially the **first application built on top of [`pg_bio`](https://github.com/your-org/pg_bio)**. 
+TeaFlon is officially the **first application built on top of [`pg_bio`](https://github.com/jonatas/pg_bio)**. 
 
 During Phase 1 (Mining & Template Discovery), we utilize the `pgbio-py` SDK to perform hyper-fast vector homology searches across protein embedding spaces directly in Postgres. This allows us to instantly find homologous scaffolds for our Dehalogenase, Hydrophobin, and Amelogenin domains without massive memory overhead.
 
