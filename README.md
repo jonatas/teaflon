@@ -1,6 +1,8 @@
 # TeaFlon
 
-**Primary Objective:** Design synthetic proteins capable of digesting Polytetrafluoroethylene (PTFE / Teflon) and converting the released fluorine into a structured bioceramic cluster, similar to human tooth enamel or bone.
+> 📖 **Featured Interactive Release & 3D Structural Workbench:** Read [**Introducing TeaFlon: The Pan-Organism Synthetic Biology Compiler to Cleave Forever Chemicals and Mineralize Synthetic Tooth Enamel**](https://ideia.me/teaflon-intro) on `ideia.me` — featuring an interactive dual-viewport **3Dmol.js structural workbench** (monomers, $100\text{ }^\circ\text{C}$ volcanic extremophile superpositions, and the folded 418-aa TriFusion chimera), an interactive **Pan-Organism Atlas Explorer (`7,338 proteins` across `930 species`)**, and our **Top 5 Wet-Lab Validation Protocols**.
+
+**Primary Objective:** Design synthetic proteins capable of digesting Polytetrafluoroethylene (PTFE / Teflon) and short-chain PFAS ("forever chemicals") and converting the released fluoride into a structured, ruby-red **Fluorapatite ($\text{Ca}_5(\text{PO}_4)_3\text{F}$)** bioceramic cluster, identical in crystal structure to human tooth enamel.
 
 ## The Challenge
 
@@ -99,3 +101,32 @@ To guarantee that the newly engineered bioceramic can be easily distinguished fr
 Using the `pg_bio` HNSW index, we mined the structural twins of the red carotenoid pathway from the Bell Pepper (*Capsicum annuum*). We mapped the fragile plant enzymes (`GGPPS`, `PSY`, `PDS`) to industrial-strength extremophile Archaea analogs. By co-expressing this robust red pigment cassette alongside the Teaflon mineralizer, the system precipitates **Lycopene** directly into the crystalline matrix. 
 
 **The result:** A ruby-red bioceramic that provides instant, naked-eye visual verification of successful Teflon degradation and bone synthesis.
+
+---
+
+## 🧪 Top 5 Wet-Lab Validation Protocols
+
+All 9 multi-host Golden Gate expression cassettes (`100% BsaI-free`, `CAI 1.000`) are exported in [`teaflon_multihost_plasmids.fasta`](teaflon_multihost_plasmids.fasta) to physically validate TeaFlon across 5 orthogonal experimental stages (detailed in our [**Interactive TeaFlon Intro & Wet-Lab Blueprint**](https://ideia.me/teaflon-intro)):
+
+| Wet-Lab Stage | Target Host / Chassis | Primary Instrumentation | Quantitative Pass/Fail Gate |
+| :--- | :--- | :--- | :--- |
+| **1. Disulfide Folding & 4-Domain Proteomics QC** | *Komagataella phaffii* (*P. pastoris* `AOX1`, `1,902 bp`) & *E. coli* SHuffle® `T7` (`1,393 bp`) + `GroEL/GroES` | Intact LC-MS, DTNB Ellman's Assay, Bottom-Up Trypsin LC-MS/MS | Intact MW `45,672 Da` ($\Delta m = -8.06\text{ Da}$ for 4 $\text{S–S}$ bonds); all 4 diagnostic peptides (`LYSDPAQISR`, `HGGDWTIVK`, `VLVIGTGSAGLAAAR`, `WPSTDKTK`) detected at `0.0% FDR` |
+| **2. PTFE Surface Wetting & Adsorption Kinetics** | Purified `418-aa` TeaFlon TriFusion vs. Wild-Type `Q1JU72` Monomer | Contact-Angle Goniometer & QCM-D (Teflon AF 1600 Quartz Sensors) | PTFE water contact angle drops from $\sim 114^\circ$ to $&lt; 65^\circ$; QCM-D $K_d &lt; 250\text{ nM}$ and irreversible monolayer loading $\Gamma \ge 220\text{ ng/cm}^2$ |
+| **3. 48-Hour Defluorination Kinetics** | Mesophilic `Q1JU72` TriFusion ($30\text{ }^\circ\text{C}$) & Thermophilic `A1RTA7` Chimera ($80\text{ }^\circ\text{C}$) | Thermo Orion™ Fluoride ISE & $400\text{ MHz}$ $^{19}\text{F}$-NMR ($\delta = -119\text{ ppm}$) | $\ge 100\text{ ppm } [\text{F}^-]$ released within 12h on fluoroacetate (`150 ppm` at 48h) and $\ge 10\times$ higher $[\text{F}^-]$ release than unanchored `Q1JU72` on short-chain PFAS / PTFE dispersions |
+| **4. Synthetic Tooth Enamel Biomineralization** | Active Defluorination Reactor + $45\text{ mM CaCl}_2 + 27\text{ mM Na}_2\text{HPO}_4$ | Powder XRD ($P6_3/m$), ATR-FTIR, Gravimetry & SEM-EDS | $\sim 3.98\text{ g/L}$ precipitated mineral yield matching Fluorapatite ICDD PDF `#15-0876` ($2\theta = 25.9^\circ, 31.9^\circ, 32.3^\circ, 33.1^\circ$) with $\text{Ca:P:F} \approx 5:3:1$ |
+| **5. Ruby-Red Lycopene Bioceramic Watermark** | *Pseudomonas putida* KT2440 (`60.0% GC`) & *Halobacterium salinarum* NRC-1 (`71.6% GC`) | Fluoride-Riboswitch Chromogenesis & UV-Vis Spectrophotometry | Co-precipitated ruby-red Fluorapatite pellet ($\text{CIE } a^* &gt; +25$) exhibiting the 3-fingered Lycopene absorbance triplet at $\lambda_{\max} = 444,\ 472,\ 503\text{ nm}$ |
+
+---
+
+## 📚 TeaFlon Research & Engineering Series on `ideia.me`
+
+- 🌟 **[Introducing TeaFlon: The Pan-Organism Synthetic Biology Compiler (Flagship Overview & 3D Workbench)](https://ideia.me/teaflon-intro)**
+- **[Part 1: Designing the Teflon-Eating Fusion Blueprint](https://ideia.me/teaflon-synthetic-biology-part-1)**
+- **[Part 2: Inside the Virtual Bioreactor](https://ideia.me/teaflon-synthetic-biology-part-2)**
+- **[Part 3: 3D Folding the Dehalogenase–Hydrophobin Fusion](https://ideia.me/teaflon-synthetic-biology-part-3)**
+- **[Part 4: Surviving the Fluoride Poisoning Trap](https://ideia.me/teaflon-synthetic-biology-part-4)**
+- **[Part 5: Biomineralizing Fluorapatite Tooth Enamel](https://ideia.me/teaflon-synthetic-biology-part-5)**
+- **[Part 6: Upgrading to TriFusion and Quantum Validation](https://ideia.me/teaflon-synthetic-biology-part-6-quantum-validation)**
+- **[Part 7: Solving the 400-aa Barrier with `pg_bio`](https://ideia.me/teaflon-synthetic-biology-part-7-pg-bio)**
+- **[Part 8: 3D Genomic Architecture and ORCA Plasmid Looping](https://ideia.me/teaflon-synthetic-biology-part-8-genomic-architecture)**
+
