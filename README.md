@@ -1,6 +1,10 @@
 # TeaFlon
 
 > 📖 **Featured Interactive Release & 3D Structural Workbench:** Read [**Introducing TeaFlon: The Pan-Organism Synthetic Biology Compiler to Cleave Forever Chemicals and Mineralize Synthetic Tooth Enamel**](https://ideia.me/teaflon-intro) on `ideia.me` — featuring an interactive dual-viewport **3Dmol.js structural workbench** (monomers, $100\text{ }^\circ\text{C}$ volcanic extremophile superpositions, and the folded 418-aa TriFusion chimera), an interactive **Pan-Organism Atlas Explorer (`7,338 proteins` across `930 species`)**, and our **Top 5 Wet-Lab Validation Protocols**.
+>
+> 🔗 **Related Ecosystem Repositories:**
+> - [**`jonatas/bio-pipelines`**](https://github.com/jonatas/bio-pipelines) — Generalizes TeaFlon's 4-module grammar into a declarative multi-feedstock bioprocess compiler & interactive RK4 Cascade Explorer across PTFE, PET plastics, sugarcane bagasse, and corn stover.
+> - [**`jonatas/pg_bio`**](https://github.com/jonatas/pg_bio) — The native Rust + PostgreSQL 18 multiomics extension powering both `teaflon` and `bio-pipelines`.
 
 **Primary Objective:** Design synthetic proteins capable of digesting Polytetrafluoroethylene (PTFE / Teflon) and short-chain PFAS ("forever chemicals") and converting the released fluoride into a structured, ruby-red **Fluorapatite ($\text{Ca}_5(\text{PO}_4)_3\text{F}$)** bioceramic cluster, identical in crystal structure to human tooth enamel.
 
