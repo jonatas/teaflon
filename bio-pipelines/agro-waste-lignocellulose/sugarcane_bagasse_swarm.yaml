@@ -1,0 +1,48 @@
+pipeline_id: sugarcane-bagasse
+name: "Sugarcane Bagasse (Bagaço de Cana) 3-Enzyme Consortium -> C5/C6 & 2,5-FDCA"
+feedstock:
+  type: lignocellulose
+  composition:
+    cellulose_pct: 42.0
+    hemicellulose_xylan_pct: 25.0
+    lignin_pct: 20.0
+    ash_and_extractives_pct: 13.0
+  target_bond: "Crystalline Cellulose beta-1,4-Glycosidic + Lignin beta-O-4"
+  smiles: "OCC1OC(OC2C(O)C(O)C(OC2CO)O)C(O)C(O)C1O"
+  reference_analog_smiles: "OCC1OC(O)C(O)C(O)C1O"
+reactor:
+  temperature_c: 55.0
+  ph: 5.0
+modules:
+  module_1_anchor:
+    role: "Interfacial Anchor"
+    subtype: "CBM_Cellulose_Anchor"
+    description: "Fungal CBM1 / Bacterial CBM3 Dockerin prying crystalline cellulose I_beta"
+  module_2_scissor:
+    role: "Primary Bond Scissor (3-Enzyme Swarm Consortium)"
+    consortium_members:
+      - name: "Lignin_Shield_Breaker"
+        subtype: "DyP_Peroxidase_Laccase"
+        target_fraction: "lignin (20%)"
+      - name: "Hemicellulose_Unzipper"
+        subtype: "GH10_GH11_Xylanase"
+        target_fraction: "xylan (25%)"
+      - name: "Crystalline_Cellulose_Cleaver"
+        subtype: "AA9_LPMO_Cellulase"
+        target_fraction: "cellulose (42%)"
+  module_3_sink:
+    role: "Equilibrium Sink"
+    subtype: "Cellobiose_FDCA_Sink"
+    sink_product: "Glucose-1-P + 2,5-FDCA (Eliminates Cellobiose Ki ~ 1 mM Inhibition)"
+  module_4_beacon:
+    role: "Optical Beacon"
+    subtype: "Carotenoid_Reporter"
+    sensor: "XylR / FerC Xylose-Ferulate Biosensor"
+    readout: "Lycopene / beta-Carotene Saccharification Completion Readout"
+linkers:
+  - "PTPTPTPTPTPT"
+  - "GGGGSGGGGSGGGGS"
+hosts:
+  - b_subtilis
+  - p_pastoris
+  - s_cerevisiae

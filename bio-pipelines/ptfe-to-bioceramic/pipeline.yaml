@@ -1,0 +1,43 @@
+pipeline_id: ptfe-to-bioceramic
+name: "TeaFlon: PTFE/PFAS Forever Chemicals -> Fluorapatite Tooth Enamel Bioceramic"
+feedstock:
+  type: fluoropolymer
+  target_bond: "C-F (Aliphatic Fluorocarbon, 540 kJ/mol)"
+  smiles: "FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F"
+  reference_analog_smiles: "FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(=O)O"
+reactor:
+  temperature_c: 37.0
+  ph: 7.4
+  calcium_mm: 50.0
+modules:
+  module_1_anchor:
+    role: "Interfacial Anchor"
+    subtype: "Hydrophobin"
+    reference_uniprot: "P79073"
+    min_gravy: 0.15
+  module_2_scissor:
+    role: "Primary Bond Scissor"
+    subtype: "Dehalogenase"
+    reference_uniprot: "Q1JU72"
+    extremophile_uniprot: "A1RTA7"
+    theozyme_template: "q1ju72_dehalogenase_hexad"
+  module_3_sink:
+    role: "Equilibrium Sink"
+    subtype: "AMELX_Mineral_Tag"
+    peptide_tag: "WPSTDKTKREEVD"
+    sink_product: "Ca5(PO4)3F (Fluorapatite)"
+  module_4_beacon:
+    role: "Optical Beacon"
+    subtype: "Carotenoid_Reporter"
+    sensor: "crcB Fluoride Riboswitch"
+    reporter_uniprot: "W9DPJ6"
+    readout: "Ruby-Red Lycopene/Carotenoid Pellet (470/502 nm)"
+linkers:
+  - "GGGGSGGGGSGGGGS"
+  - "EAAAK"
+  - "GGGGSEAAAKGGGGS"
+hosts:
+  - e_coli
+  - p_putida
+  - s_acidocaldarius
+  - h_sapiens

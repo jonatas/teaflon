@@ -1,0 +1,40 @@
+pipeline_id: plastics-upcycling
+name: "Thermostable PET & Ester-Urethane Upcycling Chimera (Tg ~ 68°C)"
+feedstock:
+  type: synthetic_polyester
+  target_bond: "Aromatic Ester / Urethane Bond (360 kJ/mol)"
+  smiles: "OC(=O)c1ccc(C(=O)OCCO)cc1"
+  reference_analog_smiles: "OC(=O)c1ccc(C(=O)O)cc1"
+reactor:
+  temperature_c: 68.0
+  ph: 8.0
+  calcium_mm: 25.0
+modules:
+  module_1_anchor:
+    role: "Interfacial Anchor"
+    subtype: "CBM_Hydrophobin"
+    reference_uniprot: "P79073"
+    min_gravy: -0.20
+  module_2_scissor:
+    role: "Primary Bond Scissor"
+    subtype: "PETase_Cutinase_Esterase"
+    reference_uniprot: "G9BY57"
+    secondary_scissor: "MHETase"
+  module_3_sink:
+    role: "Equilibrium Sink"
+    subtype: "Terephthalate_Dioxygenase_Sink"
+    sink_product: "Protocatechuate / Bio-Vanillin / Ca-Terephthalate"
+  module_4_beacon:
+    role: "Optical Beacon"
+    subtype: "Carotenoid_Reporter"
+    sensor: "PcaU Terephthalate-Inducible Promoter"
+    readout: "Violacein / Carotenoid Colorimetric Broth"
+linkers:
+  - "GGGGSGGGGSGGGGS"
+  - "EAAAK"
+  - "PTPTPTPTPTPT"
+hosts:
+  - b_subtilis
+  - p_putida
+  - c_necator
+  - p_pastoris
